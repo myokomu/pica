@@ -1,0 +1,53 @@
+<html>
+<head>
+  <style type="text/css">
+    .canvas {
+      display: inline-block;
+    }
+
+    .canvas li {
+      width: 50px;
+      height: 50px;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .control-panel {
+      display: inline-block;
+      margin-left: 20px;
+      vertical-align: top;
+    }
+
+    .control-panel .colors {
+      width: 200px;
+    }
+
+    .control-panel .color {
+      display: block;
+      text-align: center;
+      margin-top: 8px;
+      border-radius: 3px;
+      border: 2px solid #aaa;
+      height: 20px;
+      color: #fff;
+    }
+  </style>
+
+  <script src="./vendor/jquery-2.2.3.min.js"></script>
+</head>
+
+<body>
+  <div class="canvas"></div>
+
+  <div class="control-panel">
+    <div class="color-pallette">
+      <span class="color-tester" style="display: none;"></span>
+      <input>
+      <button>Add New Color</button>
+      <div class="colors"></div>
+    </div>
+  </div>
+
+  <script src="./canvas.js"></script>
+</body>
+</html>
