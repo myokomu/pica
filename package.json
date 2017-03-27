@@ -1,0 +1,25 @@
+{
+  "name": "pica",
+  "version": "0.1.0",
+  "description": "a highly customizable graphing application",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/myokomu/pica.git"
+  },
+  "author": "myokomu",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "react-scripts": "0.9.5"
+  }
+}
