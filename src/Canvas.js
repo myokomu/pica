@@ -1,5 +1,6 @@
 import _ from 'lodash'
 import React, {Component} from 'react'
+import Block from './Block'
 
 class Canvas extends Component {
   render () {
@@ -10,8 +11,7 @@ class Canvas extends Component {
             <div className={i%2 === 0 ? "odd row" : "even row"} key={i}>
               {_.times(this.props.columns, (j) => {
                 return(
-                  <div className={j%2 === 0 ? "odd column" : "even column"} key={j}>
-                  </div>
+                  <Block index={j} key={j} />
                 )
               })}
             </div>)
