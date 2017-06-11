@@ -1,1 +1,2 @@
-Pica is a highly customizable graphing application.
+Pica will be a customizable graphing application.
+It is now a pixel painter.
