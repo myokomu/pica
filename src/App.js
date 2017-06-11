@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import Canvas from './Canvas'
+import ControlPanel from './ControlPanel'
 import './App.css'
 
 class App extends Component {
@@ -15,6 +16,7 @@ class App extends Component {
     return(
       <div>
         <Canvas rows={this.state.rows} columns={this.state.columns} />
+        <ControlPanel />
       </div>
     )
   }

@@ -26,3 +26,23 @@
 .odd .column.even {
   background: #f8f8f8;
 }
+
+.control-panel {
+  display: inline-block;
+  margin-left: 20px;
+  vertical-align: top;
+}
+
+.control-panel .colors {
+  width: 200px;
+}
+
+.control-panel .color {
+  display: block;
+  text-align: center;
+  margin-top: 8px;
+  border-radius: 3px;
+  border: 2px solid #aaa;
+  height: 20px;
+  color: #fff;
+}
