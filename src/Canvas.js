@@ -8,10 +8,10 @@ class Canvas extends Component {
       <div className='canvas'>
         {_.times(this.props.rows, (i) => {
           return(
-            <div className={i%2 === 0 ? "odd row" : "even row"} key={i}>
+            <div className='row' key={i}>
               {_.times(this.props.columns, (j) => {
                 return(
-                  <Block index={j} key={j} />
+                  <Block cordinate={[i,j]} currentColor={this.props.currentColor} key={j} />
                 )
               })}
             </div>)

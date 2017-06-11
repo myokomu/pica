@@ -6,19 +6,19 @@ class ControlPanel extends Component {
     super(props)
     this.state = {
       newColor: '',
-      colors: []
+      colors: [this.props.initialColor]
     }
   }
 
   render() {
     return (
-      <div className="control-panel">
-        <div className="color-pallette">
+      <div className='control-panel'>
+        <div>
           <input value={this.state.newColor}
                  onChange={this.handleChange}>
           </input>
           <button onClick={this.handleClick}>Add New Color</button>
-          <div className="colors">
+          <div className='colors'>
             {this.state.colors.map((color, index) => {
               return(
                 <div style={{background: color}} key={index}>{color}</div>
@@ -34,6 +34,7 @@ class ControlPanel extends Component {
     this.setState({
       colors: updatedColors
     })
+    this.props.setCurrentColor(this.state.newColor)
   }
 
   handleChange = (e) => {
