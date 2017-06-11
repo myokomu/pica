@@ -15,13 +15,17 @@ class ControlPanel extends Component {
       <div className='control-panel'>
         <div>
           <input value={this.state.newColor}
-                 onChange={this.handleChange}>
+                 onChange={this.setNewColorValue}>
           </input>
-          <button onClick={this.handleClick}>Add New Color</button>
+          <button onClick={this.addNewColor}>Add New Color</button>
           <div className='colors'>
             {this.state.colors.map((color, index) => {
               return(
-                <div style={{background: color}} key={index}>{color}</div>
+                <div style={{background: color}}
+                     key={index}
+                     onClick={this.changeCurrentColor}>
+                  {color}
+                </div>
             )})}
           </div>
         </div>
@@ -29,7 +33,11 @@ class ControlPanel extends Component {
     )
   }
 
-  handleClick = () => {
+  changeCurrentColor = (e) => {
+    this.props.setCurrentColor(e.target.textContent)
+  }
+
+  addNewColor = () => {
     let updatedColors= this.state.colors.concat(this.state.newColor)
     this.setState({
       colors: updatedColors
@@ -37,7 +45,7 @@ class ControlPanel extends Component {
     this.props.setCurrentColor(this.state.newColor)
   }
 
-  handleChange = (e) => {
+  setNewColorValue = (e) => {
     this.setState({newColor: e.target.value})
   }
 }
