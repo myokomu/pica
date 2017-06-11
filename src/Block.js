@@ -18,7 +18,14 @@ class Block extends Component {
   }
 
   setBackground = () => {
-    this.setState({background: this.props.currentColor})
+    let colorToBeSet
+    if (this.state.background === this.props.currentColor) {
+      colorToBeSet = this.getDefaultBackground()
+    } else {
+      colorToBeSet = this.props.currentColor
+    }
+
+    this.setState({background: colorToBeSet})
   }
 
   getDefaultBackground = () => {
