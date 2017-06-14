@@ -1,6 +1,6 @@
 {
   "name": "pica",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "will be a customizable graphing application",
   "scripts": {
     "start": "react-scripts start",
