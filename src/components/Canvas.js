@@ -20,7 +20,8 @@ const Canvas = ({canvas, onClick}) => {
   )}
 
 Canvas.propTypes = {
-  canvas: PropTypes.array.isRequired
+  canvas: PropTypes.array.isRequired,
+  onClick: PropTypes.func.isRequired
 }
 
 export default Canvas
