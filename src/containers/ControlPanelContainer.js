@@ -1,5 +1,5 @@
 import {connect} from 'react-redux'
-import {addColorToPalette} from '../actions'
+import {addColorToPalette, setCurrentColor} from '../actions'
 import ControlPanel from '../components/ControlPanel'
 
 const mapStateToProps = (state) => ({
@@ -9,6 +9,9 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch, ownProps) => ({
   addColor: (ownProps) => {
     dispatch(addColorToPalette(ownProps))
+  },
+  setCurrentColor: (ownProps) => {
+    dispatch(setCurrentColor(ownProps))
   }
 })
 

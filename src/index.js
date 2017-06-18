@@ -17,11 +17,11 @@ render(
   document.getElementById('root'))
 
 setTimeout(() =>
-  store.dispatch(changeSquareColor([3,5], 'orange')),
+  store.dispatch(changeSquareColor([3,5])),
   250)
 
 setTimeout(() =>
-  store.dispatch(changeSquareColor([1,3], 'cyan')),
+  store.dispatch(changeSquareColor([1,3])),
   500)
 
 setTimeout(() => {

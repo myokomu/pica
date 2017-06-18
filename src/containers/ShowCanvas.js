@@ -8,7 +8,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
   onClick: (ownProps) => {
-    dispatch(changeSquareColor(ownProps, 'green'))
+    dispatch(changeSquareColor(ownProps))
   }
 })
 

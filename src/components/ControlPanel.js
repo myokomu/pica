@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react'
 
-const ControlPanel = ({palette, addColor}) => {
+const ControlPanel = ({palette, addColor, setCurrentColor}) => {
   let input
   return(
     <div className='control-panel'>
@@ -13,7 +13,8 @@ const ControlPanel = ({palette, addColor}) => {
       </button>
 
       {palette.map((color, index) =>
-        <div style={{background: color}}
+        <div onClick={ () => setCurrentColor(color) }
+             style={{background: color}}
              key={index}>
           {color}
         </div>
@@ -23,7 +24,8 @@ const ControlPanel = ({palette, addColor}) => {
 
 ControlPanel.propTypes = {
   palette: PropTypes.array.isRequired,
-  addColor: PropTypes.func.isRequired
+  addColor: PropTypes.func.isRequired,
+  setCurrentColor: PropTypes.func.isRequired
 }
 
 export default ControlPanel
