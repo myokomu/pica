@@ -5,7 +5,7 @@ import {Provider} from 'react-redux'
 
 import App from './App'
 import picaApp from './reducers'
-import {changeSquareColor} from './actions'
+import {changeSquareColor, addColorToPalette} from './actions'
 import './index.css'
 
 let store = createStore(picaApp)
@@ -23,3 +23,8 @@ setTimeout(() =>
 setTimeout(() =>
   store.dispatch(changeSquareColor([1,3], 'cyan')),
   500)
+
+setTimeout(() => {
+  store.dispatch(addColorToPalette('red'))
+  console.log(store.getState().palette)
+}, 500)

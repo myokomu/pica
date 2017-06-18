@@ -1,4 +1,4 @@
-import {CHANGE_SQUARE_COLOR} from './actions'
+import {CHANGE_SQUARE_COLOR, ADD_COLOR_TO_PALETTE} from './actions'
 
 const initialNumOfRows = 8
 const initialNumOfColumns = 8
@@ -6,7 +6,8 @@ const initialNumOfColumns = 8
 const initialState = {
   numOfRows: initialNumOfRows,
   numOfColumns: initialNumOfColumns,
-  canvas: createCanvas(initialNumOfRows, initialNumOfColumns)
+  canvas: createCanvas(initialNumOfRows, initialNumOfColumns),
+  palette: ['#3498DB']
 }
 
 function picaApp(state = initialState, action) {
@@ -15,6 +16,12 @@ function picaApp(state = initialState, action) {
       let newCanvas = JSON.parse(JSON.stringify(state.canvas))
       newCanvas[action.cordinate[0]][action.cordinate[1]] = action.color
       return Object.assign({}, state, {canvas: newCanvas})
+
+    case ADD_COLOR_TO_PALETTE:
+      let newPalette = state.palette.slice()
+      newPalette.push(action.color)
+      return Object.assign({}, state, {palette: newPalette})
+
     default:
       return state
   }
