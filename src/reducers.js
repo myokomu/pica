@@ -14,9 +14,7 @@ function picaApp(state = initialState, action) {
     case CHANGE_SQUARE_COLOR:
       let newCanvas = JSON.parse(JSON.stringify(state.canvas))
       newCanvas[action.cordinate[0]][action.cordinate[1]] = action.color
-      let newState = Object.assign({}, state)
-      newState.canvas = newCanvas
-      return Object.assign({}, state, newState)
+      return Object.assign({}, state, {canvas: newCanvas})
     default:
       return state
   }
