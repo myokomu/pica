@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react'
 
-const Canvas = ({canvas}) => {
+const Canvas = ({canvas, onClick}) => {
   return(
     <div className='canvas'>
       {canvas.map((row, i) => {
@@ -8,9 +8,10 @@ const Canvas = ({canvas}) => {
           <div className='row' key={i}>
             {row.map((blockColor, j)=>{
               return(
-                <div style={{background: blockColor}}
-                  className="block"
-                  key={j}>
+                <div onClick={()=>(onClick([i,j]))}
+                     style={{background: blockColor}}
+                     className="block"
+                     key={j}>
                 </div>
               )})}
           </div>
