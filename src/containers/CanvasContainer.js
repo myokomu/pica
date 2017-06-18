@@ -12,9 +12,9 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
   }
 })
 
-const ShowCanvas = connect(
+const CanvasContainer = connect(
   mapStateToProps,
   mapDispatchToProps
 )(Canvas)
 
-export default ShowCanvas
+export default CanvasContainer

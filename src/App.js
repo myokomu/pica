@@ -1,10 +1,10 @@
 import React from 'react'
-import ShowCanvas from './containers/ShowCanvas'
+import CanvasContainer from './containers/CanvasContainer'
 import ControlPanelContainer from './containers/ControlPanelContainer'
 
 const App = () => (
   <div>
-    <ShowCanvas />
+    <CanvasContainer />
     <ControlPanelContainer />
   </div>
 )
