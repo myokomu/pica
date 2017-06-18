@@ -3,7 +3,8 @@ import {addColorToPalette, setCurrentColor} from '../actions'
 import ControlPanel from '../components/ControlPanel'
 
 const mapStateToProps = (state) => ({
-  palette: state.palette
+  palette: state.palette,
+  currentColor: state.currentColor
 })
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
