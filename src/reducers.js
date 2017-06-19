@@ -3,13 +3,15 @@ import {CHANGE_SQUARE_COLOR, ADD_COLOR_TO_PALETTE,  SET_CURRENT_COLOR} from './a
 const initialNumOfRows = 8
 const initialNumOfColumns = 8
 const initialColor = '#3498DB'
+const blockColorPlaceholder = 'blank'
 
 const initialState = {
   numOfRows: initialNumOfRows,
   numOfColumns: initialNumOfColumns,
   canvas: createCanvas(initialNumOfRows, initialNumOfColumns),
   palette: [initialColor],
-  currentColor: initialColor
+  currentColor: initialColor,
+  blockColorPlaceholder: blockColorPlaceholder
 }
 
 function picaApp(state = initialState, action) {
@@ -36,7 +38,7 @@ function picaApp(state = initialState, action) {
 function createCanvas(numOfRows, numOfColumns) {
   let canvas = new Array(numOfRows)
   for (var i=0; i < numOfRows; i++) {
-    canvas[i] = new Array(numOfColumns).fill('blank')
+    canvas[i] = new Array(numOfColumns).fill(blockColorPlaceholder)
   }
   return canvas
 }

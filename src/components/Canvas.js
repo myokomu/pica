@@ -1,6 +1,11 @@
 import React, {PropTypes} from 'react'
 
-const Canvas = ({canvas, onClick}) => {
+const setBackground = (color, placeholder) => {
+  if (color !== placeholder) {
+    return({background: color})
+  }}
+
+const Canvas = ({canvas, blockColorPlaceholder, onClick}) => {
   return(
     <div className='canvas'>
       {canvas.map((row, i) => {
@@ -9,7 +14,7 @@ const Canvas = ({canvas, onClick}) => {
             {row.map((blockColor, j)=>{
               return(
                 <div onClick={()=>(onClick([i,j]))}
-                     style={{background: blockColor}}
+                     style={setBackground(blockColor, blockColorPlaceholder)}
                      className="block"
                      key={j}>
                 </div>
@@ -21,6 +26,7 @@ const Canvas = ({canvas, onClick}) => {
 
 Canvas.propTypes = {
   canvas: PropTypes.array.isRequired,
+  blockColorPlaceholder: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired
 }
 

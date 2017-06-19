@@ -3,7 +3,8 @@ import Canvas from '../components/Canvas'
 import {changeSquareColor} from '../actions'
 
 const mapStateToProps = (state) => ({
-  canvas: state.canvas
+  canvas: state.canvas,
+  blockColorPlaceholder: state.blockColorPlaceholder
 })
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
