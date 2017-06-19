@@ -2,7 +2,7 @@ import {connect} from 'react-redux'
 import Canvas from '../components/Canvas'
 import {changeSquareColor} from '../actions'
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   canvas: state.canvas,
   blockColorPlaceholder: state.blockColorPlaceholder
 })

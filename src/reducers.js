@@ -14,7 +14,7 @@ const initialState = {
   blockColorPlaceholder: blockColorPlaceholder
 }
 
-function picaApp(state = initialState, action) {
+const picaApp = (state = initialState, action) => {
   switch (action.type) {
     case CHANGE_SQUARE_COLOR:
       let newCanvas = JSON.parse(JSON.stringify(state.canvas))
@@ -32,8 +32,7 @@ function picaApp(state = initialState, action) {
 
     default:
       return state
-  }
-}
+  }}
 
 function createCanvas(numOfRows, numOfColumns) {
   let canvas = new Array(numOfRows)
