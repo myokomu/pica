@@ -1,7 +1,7 @@
 export const CHANGE_SQUARE_COLOR = 'CHANGE_SQURE_COLOR'
 export const ADD_COLOR_TO_PALETTE = 'ADD_COLOR_TO_PALETTE'
 export const SET_CURRENT_COLOR = 'SET_CURRENT_COLOR'
-export const changeSquareColor = function(cordinate, color) {
+export const changeSquareColor = function(cordinate) {
   return { type: CHANGE_SQUARE_COLOR, cordinate }
 }
 
